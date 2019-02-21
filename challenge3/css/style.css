@@ -1,0 +1,113 @@
+/* base styles */
+body {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* grid layout  */
+
+.container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "header header header"
+                         "main main main"; 
+}
+
+/* styling the header */
+
+.main-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.685), rgba(0, 0, 0, 0.568)), url(../images/night-television-tv-theme-machines.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    grid-area: header;
+}
+
+/* styling the nav */
+.navBar {
+    background-color: black;
+    width: 100%;
+    display: inline-block;
+}
+
+a {
+    float: right;
+    color: #ffffff;
+    text-decoration-line: none;
+    font-size: 2vw;
+    padding: 20px;
+}
+
+.name {
+    font-family: 'Coiny', cursive;
+    float: left;
+    color: yellow;
+    text-decoration-line: none;
+    font-size: 2vw;
+    padding: 20px; 
+}
+
+a:hover {
+    color: yellow;
+    transition: .3s;
+}
+
+.intro {
+    text-align: center;
+    padding-top: 8%;
+    color: yellow;
+    font-size: 3vw; 
+}
+
+/* end */
+
+/* styling the content */
+.main-container {
+    grid-area: main;
+    color: #000000;
+    text-align: center;
+}
+
+.seriesGallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "content image trailer"; 
+        grid-gap: 20px; 
+        padding-top: 20px;
+}
+
+.strangerThings {
+    padding: 0px 15px;
+    grid-area: content;
+    text-align: justify;
+}
+
+.images {
+    margin-left: 5%;
+    width: 250px;
+    height: 350px;
+}
+
+.image1 {
+    grid-area: image; 
+}
+
+.stTrailer {
+    grid-area: trailer;
+}
+
+.titans {
+    padding: 0px 15px;
+    grid-area: content;
+    text-align: justify;
+}
+
+.image2 {
+    grid-area: image;
+}
+
+.tTrailer {
+    grid-area: trailer;
+}
