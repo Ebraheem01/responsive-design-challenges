@@ -111,3 +111,17 @@ a:hover {
 .tTrailer {
     grid-area: trailer;
 }
+
+.gameofThrones {
+    padding: 0px 15px;
+    grid-area: content;
+    text-align: justify;
+}
+
+.image3 {
+    grid-area: image; 
+}
+
+.gotTrailer {
+    grid-area: trailer;
+}
