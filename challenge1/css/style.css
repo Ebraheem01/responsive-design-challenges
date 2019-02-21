@@ -1,0 +1,155 @@
+/* base styles */
+
+body {
+    margin: 2%;
+}
+
+/* grid layout */
+.container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 130px);
+    grid-template-areas: "header header header"
+                         "navbar section section"
+                         "article1 article2 article3"
+                         "footer footer footer"   ;  
+}
+
+div {
+    text-align: center;
+}
+
+.header {
+    grid-area: header;
+    background-color: green;
+    border-radius: 10px;
+}
+
+.navbar {
+    grid-area: navbar;
+    background-color: green;
+    border-radius: 10px;
+}
+
+.section {
+    grid-area: section;
+    background-color: green;
+    border-radius: 10px;
+}
+
+.article1 {
+    grid-area: article1;
+    background-color: green;
+    border-radius: 10px;
+}
+
+.article2 {
+    grid-area: article2;
+    background-color: green;
+    border-radius: 10px;
+}
+
+.article3 {
+    grid-area: article3;
+    background-color: green;
+    border-radius: 10px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: green;
+    border-radius: 10px;
+}
+
+/* media queries */
+@media only screen and (min-width:320px) and (max-width:425px) {
+    .header {
+        background-color: red;
+    }
+    
+    .navbar {
+        background-color: red;
+    }
+    
+    .section {
+        background-color: red;
+    }
+    
+    .article1 {
+        background-color: red;
+    }
+    
+    .article2 {
+        background-color: red;
+    }
+    
+    .article3 {
+        background-color: red;
+    }
+    
+    .footer {
+        background-color: red;
+    }
+}
+
+
+@media only screen and (min-width:426px) and (max-width:768px) {
+    .header {
+        background-color: blue;
+    }
+    
+    .navbar {
+        background-color: blue;
+    }
+    
+    .section {
+        background-color: blue;
+    }
+    
+    .article1 {
+        background-color: blue;
+    }
+    
+    .article2 {
+        background-color: blue;
+    }
+    
+    .article3 {
+        background-color: blue;
+    }
+    
+    .footer {
+        background-color: blue;
+    }
+}
+
+@media only screen and (min-width:1328px) and (max-width:1768px) {
+    .header {
+        background-color: orange;
+    }
+    
+    .navbar {
+        background-color: orange;
+    }
+    
+    .section {
+        background-color: orange;
+    }
+    
+    .article1 {
+        background-color: orange;
+    }
+    
+    .article2 {
+        background-color: orange;
+    }
+    
+    .article3 {
+        background-color: orange;
+    }
+    
+    .footer {
+        background-color: orange;
+    }
+}
