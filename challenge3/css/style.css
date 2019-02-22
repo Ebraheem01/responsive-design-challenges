@@ -38,7 +38,7 @@ a {
     float: right;
     color: #ffffff;
     text-decoration-line: none;
-    font-size: 2vw;
+    font-size: 2.5vw;
     padding: 20px;
 }
 
@@ -49,7 +49,7 @@ a {
     float: left;
     color: yellow;
     text-decoration-line: none;
-    font-size: 2vw;
+    font-size: 2.5vw;
     padding: 20px; 
 }
 
@@ -213,7 +213,7 @@ footer {
         background-size: contain;
         background-attachment: fixed;
         background-repeat: no-repeat;
-        height: 60vh;
+        height: 50vh;
     }
 
     a {
