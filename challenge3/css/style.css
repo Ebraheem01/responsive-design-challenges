@@ -2,6 +2,7 @@
 body {
     margin: 0;
     font-family: 'Oswald', sans-serif;
+    scroll-behavior: smooth;
 }
 
 /* grid layout  */
@@ -10,9 +11,9 @@ body {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     grid-template-areas: "header header header"
-                         "main main main"; 
+                         "main main main"
+                         "footer footer footer"; 
 }
 
 /* styling the header */
@@ -27,6 +28,7 @@ body {
 
 /* styling the nav */
 .navBar {
+    position: fixed;
     background-color: black;
     width: 100%;
     display: inline-block;
@@ -40,6 +42,8 @@ a {
     padding: 20px;
 }
 
+/* styling the name of site inside the navbar */
+
 .name {
     font-family: 'Coiny', cursive;
     float: left;
@@ -49,10 +53,27 @@ a {
     padding: 20px; 
 }
 
-a:hover {
+/* styling the sign up button */
+
+.btn {
+    background-color: #00000000;
+    border-radius: 50%;
+    border: 5px solid;
+    color: yellow;
+}
+
+.btn:hover {
+    background-color: yellow;
+    color: black;
+    transition: .3s ease-in-out;
+}
+
+.navBar a:hover {
     color: yellow;
     transition: .3s;
 }
+
+/* styling the introduction in the header */
 
 .intro {
     text-align: center;
@@ -70,58 +91,163 @@ a:hover {
     text-align: center;
 }
 
+/* a grid for the different tv shows */
+
 .seriesGallery {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: "content image trailer"; 
-        grid-gap: 20px; 
-        padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "content image trailer"; 
+    grid-gap: 20px; 
+    padding-top: 20px;
 }
 
 .strangerThings {
     padding: 0px 15px;
     grid-area: content;
-    text-align: justify;
+}
+
+.tTrailer {
+    padding: 0px 15px;
+    grid-area: content;
+}
+
+.gotTrailer {
+    padding: 0px 15px;
+    grid-area: content;
+}
+
+.aTrailer {
+    padding: 0px 15px;
+    grid-area: content;
 }
 
 .images {
+    padding-top: 12%;
     margin-left: 5%;
     width: 250px;
     height: 350px;
+}
+
+.trailers {
+    padding-top: 4%;
+    width: 703px; 
+    height: 340px;
 }
 
 .image1 {
     grid-area: image; 
 }
 
-.stTrailer {
-    grid-area: trailer;
-}
-
-.titans {
-    padding: 0px 15px;
-    grid-area: content;
-    text-align: justify;
-}
-
 .image2 {
     grid-area: image;
 }
 
-.tTrailer {
-    grid-area: trailer;
-}
-
-.gameofThrones {
-    padding: 0px 15px;
-    grid-area: content;
-    text-align: justify;
-}
-
 .image3 {
-    grid-area: image; 
+    grid-area: image;
 }
 
-.gotTrailer {
+.image4 {
+    grid-area: image;
+}
+
+.stTrailer,
+.tTrailer,
+.gotTrailer,
+.aTrailer {
     grid-area: trailer;
+}
+
+/* styling my footer */
+
+footer {
+    grid-area: footer;
+    font-family: 'Coiny', cursive;
+    font-size: 2vw;
+    background-color: black;
+    text-align: center;
+    color: yellow;
+}
+
+@media only screen and (max-width:1024px) {
+ 
+    .trailers {
+        padding-top: 10%;
+        width: 443px; 
+        height: 350px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    
+    .seriesGallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "content content image"; 
+        grid-gap: 20px; 
+        padding-top: 20px;
+    }
+
+    .trailers {
+        display: none;
+        padding-top: 10%;
+        width: 443px; 
+        height: 350px;
+    }
+
+}
+
+@media only screen and (min-width:320px) and (max-width:450px) {
+    /* grid layout  */
+
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "header"
+                            "main"
+                            "footer"; 
+    }
+
+    /* styling the header */
+
+    .main-header {
+        background: linear-gradient(rgba(0, 0, 0, 0.685), rgba(0, 0, 0, 0.568)), url(../images/night-television-tv-theme-machines.jpg);
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        height: 50vh;
+    }
+
+    a {
+        padding: 10px;
+    }
+
+    /* styling the name of site inside the navbar */
+
+    .name {
+        padding: 10px; 
+    }
+
+
+    /* styling the content */
+    .main-container {
+        grid-area: main;
+        color: #000000;
+        text-align: center;
+    }
+
+    /* a grid for the different tv shows */
+
+    .seriesGallery {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "image" 
+                            "content"; 
+        grid-gap: 10px; 
+    }
+
+    .images {
+        padding-top: 12%;
+        margin-left: 5%;
+        width: 280px;
+        height: auto;
+    }
+   
 }
